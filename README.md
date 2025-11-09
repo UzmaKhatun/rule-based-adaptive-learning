@@ -6,6 +6,8 @@
 
 A rule-based adaptive math learning system that dynamically adjusts puzzle difficulty based on real-time performance analysis. Built with Python and Streamlit, featuring ML-ready architecture for future enhancement.
 
+---
+
 ## 🎯 Features
 
 - **Adaptive Learning Engine**: Automatically adjusts difficulty based on accuracy and response time
@@ -13,6 +15,8 @@ A rule-based adaptive math learning system that dynamically adjusts puzzle diffi
 - **Real-time Performance Tracking**: Comprehensive metrics and analytics
 - **Dual Interface**: Beautiful web UI (Streamlit) 
 - **Smart Recommendations**: Personalized learning insights and next steps
+
+---
 
 ## 🚀 Quick Start
 
@@ -30,23 +34,28 @@ pip install -r requirements.txt
 
 **Web Interface (Recommended):**
 ```bash
-streamlit run main.py
+streamlit run src/main.py
 ```
 Open your browser at `http://localhost:8501`
+
+---
 
 ## 📁 Project Structure
 
 ```
 math-adventures-adaptive-learning/
-├── main.py                 # Entry point
-├── ui.py                   # Streamlit web interface
-├── puzzle_generator.py     # Math problem generation
-├── tracker.py              # Performance tracking
-├── adaptive_engine.py      # Adaptive difficulty logic
 ├── requirements.txt        # Python dependencies
-└── README.md              # This file
+├── README.md              # This file
+└── src                    # project folder
+    └── main.py                 # Entry point
+    ├── ui.py                   # Streamlit web interface
+    ├── puzzle_generator.py     # Math problem generation
+    ├── tracker.py              # Performance tracking
+    └── adaptive_engine.py      # Adaptive difficulty logic
 
 ```
+
+---
 
 ## 🧠 How It Works
 
@@ -63,6 +72,8 @@ Performance Score = (Accuracy × 0.7) + (Speed Score × 0.3)
 - Performance < 0.4 → Decrease difficulty
 - Otherwise → Maintain current level
 
+---
+
 ### Key Components
 
 | Component | Purpose |
@@ -71,6 +82,8 @@ Performance Score = (Accuracy × 0.7) + (Speed Score × 0.3)
 | **Performance Tracker** | Logs correctness, response time, and trends |
 | **Adaptive Engine** | Analyzes performance and adjusts difficulty |
 | **User Interface** | Displays problems and provides feedback |
+
+---
 
 ## 📊 Difficulty Levels
 
