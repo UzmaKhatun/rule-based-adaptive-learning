@@ -1,4 +1,5 @@
 import requests
+from threading import Thread
 import json
 
 # Google Apps Script Web App URL
@@ -20,7 +21,8 @@ def log_to_google_sheets(event_type, data):
         response = requests.post(
             GOOGLE_SCRIPT_URL,
             json=payload,
-            timeout=5
+            timeout=10,
+            headers={'Content-Type': 'application/json'}
         )
         
         if response.status_code == 200:
@@ -30,6 +32,11 @@ def log_to_google_sheets(event_type, data):
             
     except Exception as e:
         print(f"Sheet logging error: {e}")
+
+    # Run in background thread to avoid blocking
+    thread = Thread(target=send_request)
+    thread.daemon = True
+    thread.start()
         
 
 """
@@ -725,4 +732,5 @@ def main():
 # # if __name__ == "__main__":
 
 # #     main()
+
 
