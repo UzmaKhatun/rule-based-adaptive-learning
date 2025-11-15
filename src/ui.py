@@ -33,7 +33,7 @@ def welcome_screen():
     st.markdown("""
         <div style='text-align: center; padding: 2rem;'>
             <h1 style='color: #6366f1; font-size: 3.5rem;'>🧠 Math Adventures</h1>
-            <p style='font-size: 1.5rem; color: #64748b;'>Intelligent Adaptive Learning</p>
+            <p style='font-size: 1.5rem; color: #64748b;'>Rule-Based Adaptive Learning</p>
         </div>
     """, unsafe_allow_html=True)
     
@@ -331,6 +331,7 @@ def main():
 # if __name__ == "__main__":
 
 #     main()
+
 
 
 
